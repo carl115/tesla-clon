@@ -1,37 +1,20 @@
 ---
 import Layout from '../layout/Layout.astro'
 import HeaderLayout from '../layout/components/HeaderLayout.astro'
+import HeroSection from '../components/HeroSection.astro';
+import ChargeSection from '../components/ChargeSection.astro'
 ---
 <Layout>
 	<HeaderLayout />
-
-	<section class="bg-black text-white w-screen h-screen text-center flex flex-col content-between justify-center relative overflow-hidden">
-		<div class="h-full flex flex-col relative z-30">
-			<header>
-				<h1 class="pt-12 text-[40px] font-medium">Model 3</h1>
-				<p class="text-[20px] m-0 leading-[20px]">
-					<strong>From $29,740</strong>*<br />
-					<sub>
-						<small>After Federal Tax Credit & Est. Gas Savings</small>
-					</sub>
-				</p>
-			</header>
-			<footer class="flex flex-col flex-grow items-center justify-end">
-				<div class="w-[690px] p-7 flex items-center justify-evenly">
-					<button class="bg-white/[0.8] w-[280px] text-sm font-medium text-black py-3 rounded-md backdrop-blur-xl">Order Now</button>
-					<button style="background: rgba(34, 34, 34, .65);" class="w-[280px] text-sm font-medium text-white py-3 rounded-md backdrop-blur-xl">Demo Drive</button>
-				</div>
-		
-				<p class="text-[12px] p-[24px] pb-3">
-					*Price before incentives and savings is $40,240, excluding taxes and fees. Subject to change.
-					<br />
-					<a class="underline decoration-1" href="#">Learn about est. gas savings.</a>
-				</p>
-			</footer>
+	<main class="snap-y snap-mandatory relative w-full h-screen overflow-auto">
+		<div class="snap-center">
+			<HeroSection />
 		</div>
-
-		<div class="absolute top-0 bottom-0 w-full h-full z-10">
-			<video class="object-center object-cover w-full h-full" autoplay muted loop src="/Video.mp4"></video>
+		<div class="snap-center">
+			<ChargeSection />
 		</div>
-	</section>
+		<div class="snap-center">
+			<HeroSection />
+		</div>
+	</main>	
 </Layout>
