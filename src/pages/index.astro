@@ -1,20 +1,43 @@
 ---
 import Layout from '../layout/Layout.astro'
 import HeaderLayout from '../layout/components/HeaderLayout.astro'
-import HeroSection from '../components/HeroSection.astro';
-import ChargeSection from '../components/ChargeSection.astro'
+import Section from '../components/Section.astro';
 ---
+
 <Layout>
 	<HeaderLayout />
 	<main class="snap-y snap-mandatory relative w-full h-screen overflow-auto">
 		<div class="snap-center">
-			<HeroSection />
+			<Section color="white" title="Model 3" price="$29,740" subtitle="After Federal Tax Credit & Est. Gas Savings">
+				<span slot="text-footer">*Price before incentives and savings is $40,240, excluding taxes and fees. Subject to change.</span>
+				<a slot="link-footer" class="underline decoration-1" href="#">Learn about est. gas savings.</a>
+
+				<video slot="background" class="object-center object-cover w-full h-full" autoplay muted loop src="/Video.mp4"></video>
+			</Section>
 		</div>
 		<div class="snap-center">
-			<ChargeSection />
+			<Section color="black" title="Model Y" price="$32,890" subtitle="After Federal Tax Credit & Est. Gas Savings">
+				<span slot="text-footer">*Price before incentives and savings is $43,990, excluding taxes and fees. Subject to change.</span>
+				<a slot="link-footer" class="underline decoration-1" href="#">Learn about est. gas savings.</a>
+
+				<img slot="background" src="/Model-Y.avif" alt="Model-Y" class="h-full w-full object-cover object-center" />
+			</Section>
 		</div>
 		<div class="snap-center">
-			<HeroSection />
+			<Section color="black" title="Model S" price="$71,090" subtitle="After Est. Gas Savings">
+				<span slot="text-footer">*Price before savings is $74,990, excluding taxes and fees. Subject to change.</span>
+				<a slot="link-footer" class="underline decoration-1" href="#">Learn about est. gas savings.</a>
+
+				<img slot="background" src="/Model-S.avif" alt="Model-S" class="h-full w-full object-cover object-center" />
+			</Section>
+		</div>
+		<div class="snap-center">
+			<Section color="black" title="Model X" price="$68,590" subtitle="After Federal Tax Credit & Est. Gas Savings">
+				<span slot="text-footer">*Price before incentives and savings is $79,990, excluding taxes and fees. Subject to change.</span>
+				<a slot="link-footer" class="underline decoration-1" href="#">Learn about est. gas savings.</a>
+
+				<img slot="background" src="/Model-X.avif" alt="Model-X" class="h-full w-full object-cover object-center" />
+			</Section>
 		</div>
 	</main>	
 </Layout>

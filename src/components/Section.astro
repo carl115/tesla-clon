@@ -16,10 +16,13 @@ const textColor = `text-${color}`
         </header>
         <footer class="flex flex-col flex-grow items-center justify-end">
             <div class="flex gap-x-4 mx-auto">
-                <slot name="buttons"></slot>
+                <button class="bg-white/[0.8] w-[280px] text-sm font-medium text-black py-3 rounded-md backdrop-blur-xl" slot="buttons">Order Now</button>
+                <button style="background: rgba(34, 34, 34, .65);" class="w-[280px] text-sm font-medium text-white py-3 rounded-md backdrop-blur-xl" slot="buttons">Demo Drive</button>
             </div>
             <p class={`text-[12px] p-[24px] pb-3 ${textColor}`}>
                 <slot name="text-footer"></slot>
+                <br />
+                <slot name="link-footer"></slot>
             </p>
         </footer>
     </div>
